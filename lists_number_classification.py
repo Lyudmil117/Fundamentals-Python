@@ -10,3 +10,5 @@ print(f"Positive: {', '.join(positive_list)}") #here!
 print(f'Negative: {", ".join(negative_list)}')# here we remove the [] because its wanted in the task
 print(f'Even: {", ".join(even_list)}')
 print(f'Odd: {", ".join(odd_list)}')
+
+#IMPORTANT: if you use "" with the f(str) like here, then use '' when typing ', '.join(list) or the opposite way
