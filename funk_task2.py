@@ -17,3 +17,13 @@ x3 = int(input())
 print(subtract())
 
 
+#better way(shown by the tutor)
+
+def sum_numbers(a, b):
+    return a + b
+
+def subtract(current_sum, c):
+    return current_sum - c
+
+a, b, c = int(input()), int(input()), int(input())
+result = subtract(sum_numbers(a, b), c)  #here instead of a,b,c | sum_numbers(a,b) is basicaly = current sum |
