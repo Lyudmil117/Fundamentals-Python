@@ -27,3 +27,4 @@ def subtract(current_sum, c):
 
 a, b, c = int(input()), int(input()), int(input())
 result = subtract(sum_numbers(a, b), c)  #here instead of a,b,c | sum_numbers(a,b) is basicaly = current sum |
+print(result)
