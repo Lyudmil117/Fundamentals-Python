@@ -7,3 +7,4 @@ list1 = input().split(' ')
 list1 = list(map(int, list1))
 
 even()
+
