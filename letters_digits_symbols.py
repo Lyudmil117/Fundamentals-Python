@@ -15,3 +15,15 @@ for char in text:
 print(letters)
 print(digits)
 print(symbools)
+
+
+#we can do it also like that:
+
+for char in text:
+    if char.isalnum():      #if char is letter or digit
+        if char.isalpha():
+            letters += char
+        else:
+            digits += char
+    else:
+        symbools += char
