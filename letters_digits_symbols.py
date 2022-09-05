@@ -8,7 +8,7 @@ for char in text:
     if char.isdigit(): #if char is digit in text
         digits += char
     elif char.lower() or char.upper(): # if char is lower case or upper IT IS A LETTER
-        letters += char
+        letters += char                    #here we can use alse method ISAPLPHA() ,to check if it is a letter
     else:
         symbools += char #if it is not a digit ot letter it is symbol
 
