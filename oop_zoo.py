@@ -7,24 +7,24 @@ class Zoo:
         self.fishes = []
         self.birds = []
 
-    def add_animal(self, species, name):
-        if species == "mammal":
+    def add_animal(self, spec, name): #spec = species
+        if spec == "mammal":
             self.mammals.append(name)
-        elif species == "fish":
+        elif spec == "fish":
             self.fishes.append(name)
-        elif species == "bird":
+        elif spec == "bird":
             self.birds.append(name)
 
         Zoo.__animals += 1
 
-    def get_info(self, species):
+    def get_info(self, spec):
         result = ''
-        if species == 'mammal':
-            result += f"Mammal in {self.name}: {', '.join(self, mammals)}"
-        elif species == "fish":
-            result += f"Fishes in {self.name}: {', '.join(self, fishes)}"
-        elif species == "bird":
-            result += f"Birds in {self.name}: {', '.join(self, birds)}"
+        if spec == 'mammal':
+            result += f"Mammal in {self.name}: {', '.join(self.mammals)}"
+        elif spec == "fish":
+            result += f"Fishes in {self.name}: {', '.join(self.fishes)}"
+        elif spec == "bird":
+            result += f"Birds in {self.name}: {', '.join(self.birds)}"
 
         result += f'\n Total animals: {Zoo.__animals}'
 
@@ -35,7 +35,7 @@ name_of_zoo = input()
 zoo = Zoo(name_of_zoo)
 number_of_lines = inet(input())
 
-for _ in range(number_of_lines):
+for i in range(number_of_lines):
     info = input().split(' ')
     species = info[0]
     type_of_animal = info[1]
