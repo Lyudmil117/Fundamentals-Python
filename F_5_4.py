@@ -13,4 +13,4 @@ for i in range(len(list1) - 1, -1, -1):
     if search_word not in element:
         list1.remove(element)
 
-print(list1)
+print(list1) 
