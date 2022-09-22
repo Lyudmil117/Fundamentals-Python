@@ -10,3 +10,4 @@ for character_index in range(len(first_string)):
     print(current_string)
     last_printed_string = current_string
     
+    
