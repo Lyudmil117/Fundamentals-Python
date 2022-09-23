@@ -33,3 +33,4 @@ while command != "special" and command != "regular":
         final_price = round(final_price * 0.9)
         print(f"Total price: {final_price:.2f}")
         break
+        
