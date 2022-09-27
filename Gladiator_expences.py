@@ -13,3 +13,4 @@ expenses = helmet_price * total_helmets_broken + \
     shield_price * total_shields_broken + \
     armor_price * total_armors_broken
 print(f"Gladiator expenses: {expenses:.2f} aureus")
+
