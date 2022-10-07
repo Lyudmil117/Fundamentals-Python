@@ -1,4 +1,4 @@
-# Fundamentals-Python-2022-SoftUniL
+# Fundamentals-Python-2022-SoftUni-Course
 
 Here are the solutions of various task given from SoftUni Fundamentals Programming coarses.
 Tasks include following:
