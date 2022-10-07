@@ -1,6 +1,6 @@
 def even():
-    filtered = filter(lambda num: num % 2 == 0, list1)
-    print(list(filtered))
+    filtered = filter(lambda num: num % 2 == 0, list1) # here you you put function(condition), then the sequence(list in that case)
+    print(list(filtered))             #here you print it as a list
 
 
 list1 = input().split(' ')
