@@ -1,5 +1,5 @@
 def odd_even():
-    num_list = []
+  
     odd_sum = 0
     even_sum = 0
     number = input()
