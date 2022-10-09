@@ -44,3 +44,5 @@ if len(sequence_of_elements) > 0:
     print(' '.join(sequence_of_elements))
 else:
     print(f'You have won in {counter} turns!')
+
+    
