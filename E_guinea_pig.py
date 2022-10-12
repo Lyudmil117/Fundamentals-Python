@@ -21,6 +21,7 @@ for day in range(1, 30 + 1):
 
     food = remain_food
 
+    
 
 if remain_food < 300 or hay < (remain_food * 0.95) or cover < (pig_weight / 3):
     print("Merry must go to the pet store!")
