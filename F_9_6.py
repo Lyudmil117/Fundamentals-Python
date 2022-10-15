@@ -1,5 +1,11 @@
-list1 = list(map(int, input().split(", ")))
-index_list = [num for num in range(len(list1)) if list1[num] % 2 == 0]
-# this is how i can check which are indexes of even numbers
+list1 = input().split(" ")
+palindrome = input()
+palindrome_list = []
+for word in list1:
+    if word == word[::-1]:
+        palindrome_list.append(word)
 
-print(index_list)
+count_palindrome = palindrome_list.count(palindrome)
+
+print(palindrome_list)
+print(f"Found palindrome {count_palindrome} times")
