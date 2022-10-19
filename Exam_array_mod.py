@@ -22,4 +22,6 @@ while command[0] != "end":
 
     command = input().split(" ")
 
+    
+list1 = list(map(str, list1))
 print(" ".join(list1))
