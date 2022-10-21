@@ -2,7 +2,7 @@ def check_the_rooms(numbers_of_rooms):
     total_free_chairs = 0
     total_needed_chairs = 0
     for room in range(1, numbers_of_rooms + 1):
-        free_chairs, visitors = input().split()
+        free_chairs, visitors = input().split()  #така ако си сигурен че са само два елемента получаваш - ['chairs', 'visitors']
         difference = len(free_chairs) - int(visitors)
         if difference >= 0:
             total_free_chairs += difference
