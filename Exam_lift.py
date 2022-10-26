@@ -16,7 +16,6 @@ for cabin in range(len(current_lyft_empty_seats)):
         if people_waiting == 0:
             break
 
-
 current_lyft_empty_seats = list(map(str, current_lyft_empty_seats))
 
 if (people_waiting - seated) > 0:
