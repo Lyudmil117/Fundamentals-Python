@@ -6,9 +6,9 @@ for i in range(count):
     synonym = input()
 
     if word not in dictionary:
-        dictionary[word] = list()
+        dictionary[word] = list()  # here we create KEY: and empty list [] 
 
-    dictionary[word].append(synonym)
+    dictionary[word].append(synonym) #here we start to append synonyms to the empty the empty list
 
 
 for word in dictionary:
