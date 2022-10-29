@@ -21,3 +21,5 @@ text = text.replace("_", " ")     #така на като получа WORD_SOME
 
 for id in courses[text]:
     print(f'{courses[text][id]} - {id}')
+
+    
