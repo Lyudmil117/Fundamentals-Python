@@ -54,3 +54,58 @@ while commands != "Stop":
 
 for car in garage:
     print(f'{car} -> Mileage: {garage[car][0]} kms, Fuel in the tank: {garage[car][1]} lt.')
+
+    
+    #NESTED DICTIONARIES/ INSTEAD OF LISTS NESTED ---->
+    
+    n = int(input())
+garage = {}
+for _ in range(n):
+    data = input().split("|")
+    car = data[0]
+    miles = int(data[1])
+    fuel = int(data[2])
+    garage[car] = {"miles": miles, "fuel": fuel}  # vij kak se suzdava vlojen re1nik
+
+command = input()
+while command != "Stop":
+    data = command.split(" : ")
+    action = data[0]
+    car = data[1]
+
+    if action == "Drive":
+        distance = int(data[2])
+        fuel_to_drive = int(data[3])
+
+        if garage[car]["fuel"] >= fuel_to_drive:
+            garage[car]['miles'] += distance
+            garage[car]['fuel'] -= fuel_to_drive
+            print(f"{car} driven for {distance} kilometers. {fuel_to_drive} liters of fuel consumed.")
+            if garage[car]['miles'] > 100000:
+                print(f'Time to sell the {car}!')
+                garage.pop(car)
+        else:
+            print("Not enough fuel to make that ride")
+
+    elif action == "Refuel":
+        fuel_to_refill = int(data[2])
+        if garage[car]["fuel"] + fuel_to_refill >= 75:
+            refilled = 75 - garage[car]['fuel']
+            print(f"{car} refueled with {refilled} liters")
+            garage[car]['fuel'] = 75
+        else:
+            garage[car]['fuel'] += fuel_to_refill
+            print(f"{car} refueled with {fuel_to_refill} liters")
+
+    elif action == "Revert":
+        kilometers = int(data[2])
+        garage[car]['miles'] -= kilometers
+        if garage[car]['miles'] > 10000:
+            print(f"{car} mileage decreased by {kilometers} kilometers")
+        else:
+            garage[car]['miles'] = 10000
+
+    command = input()
+
+for car in garage:
+    print(f"{car} -> Mileage: {garage[car]['miles']} kms, Fuel in the tank: {garage[car]['fuel']} lt.")
