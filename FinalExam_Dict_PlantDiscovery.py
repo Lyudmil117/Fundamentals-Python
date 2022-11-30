@@ -50,3 +50,57 @@ for plant in my_plants:
     else:
         rating_current_plant = 0
     print(f"- {plant}; Rarity: {my_plants[plant][0]}; Rating: {rating_current_plant:.2f}")
+
+
+# МОЯ СИ НАЧИН!!!
+
+# n = int(input())
+# plants = {}
+#
+# for _ in range(n):
+#     data = input().split("<->")
+#     plants[data[0]] = {'rarity': int(data[1]), 'rating': []}
+#
+# command = input()
+#
+# while command != "Exhibition":
+#     data = command.split(": ")
+#     action = data[0]
+#
+#     if action == "Rate":
+#         new_data = data[1].split(" - ")
+#         flower = new_data[0]
+#         rating = int(new_data[1])
+#
+#         if flower in plants:
+#             plants[flower]['rating'].append(rating)
+#
+#         else:
+#             print("error")
+#
+#     elif action == "Update":
+#         new_data = data[1].split(" - ")
+#         flower = new_data[0]
+#         rarity = int(new_data[1])
+#         if flower in plants:
+#             plants[flower]['rarity'] = rarity
+#         else:
+#             print("error")
+#
+#     elif action == "Reset":
+#         flower = data[1]
+#         if flower in plants:
+#             plants[flower]['rating'].clear()
+#             plants[flower]['rating'] = [0]
+#         else:
+#             print("error")
+#
+#     command = input()
+#
+# print("Plants for the exhibition:")
+# for flower in plants:
+#     if len(plants[flower]['rating']) > 0:
+#         average_rating = sum(plants[flower]['rating']) / len(plants[flower]['rating'])
+#     else:
+#         average_rating = 0
+#     print(f"- {flower}; Rarity: {plants[flower]['rarity']}; Rating: {average_rating:.2f}")
