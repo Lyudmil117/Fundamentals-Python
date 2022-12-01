@@ -77,3 +77,78 @@ for hero in heroes:
     print(f'{hero}')
     print(f"  HP {heroes[hero]['HP']}")  #hero а не heros_name , защото въртя ТУК в речника HEROES s "hero", a ne s hero_name
     print(f"  MP {heroes[hero]['MP']}")
+
+
+# С ВЛОЖЕНИ РЕЧНИЦЕ РЕШЕНИЕ !!
+heroes = {}
+n = int(input())
+
+for _ in range(n):
+    data = input().split(" ")
+    name = data[0]
+    hp = int(data[1])
+    mp = int(data[2])
+    heroes[name] = {"HP": hp, "MP": mp}
+
+command = input()
+while command != "End":
+    data = command.split(" - ")
+    action = data[0]
+
+    if action == "Heal":
+        name = data[1]
+        healed = int(data[2])
+
+        if heroes[name]['HP'] + healed > 100:
+            to_print = 100 - heroes[name]['HP']
+            print(f"{name} healed for {to_print} HP!")
+            heroes[name]['HP'] = 100
+        else:
+            to_print = healed
+            print(f'{name} healed for {to_print} HP!')
+            heroes[name]['HP'] += healed
+
+    elif action == "Recharge":
+        name = data[1]
+        recharged = int(data[2])
+
+        if heroes[name]['MP'] + recharged > 200:
+            to_print = 200 - heroes[name]['MP']
+            print(f"{name} recharged for {to_print} MP!")
+            heroes[name]['MP'] = 200
+        else:
+            to_print = recharged
+            print(f'{name} recharged for {to_print} MP!')
+            heroes[name]['MP'] += recharged
+
+    elif action == "TakeDamage":
+        name = data[1]
+        damage = int(data[2])
+        attacker = data[3]
+
+        if heroes[name]['HP'] - damage <= 0:
+            heroes.pop(name)
+            print(f"{name} has been killed by {attacker}!")
+        else:
+            heroes[name]['HP'] -= damage
+            print(f"{name} was hit for {damage} HP by {attacker} and now has {heroes[name]['HP']} HP left!")
+
+    elif action == "CastSpell":
+        name = data[1]
+        mp_needed = int(data[2])
+        spell = data[3]
+
+        if heroes[name]['MP'] - mp_needed < 0:
+            print(f"{name} does not have enough MP to cast {spell}!")
+        else:
+            heroes[name]['MP'] -= mp_needed
+            print(f"{name} has successfully cast {spell} and now has {heroes[name]['MP']} MP!")
+
+    elif action == "ViewEarth":
+        pass
+    command = input()
+
+for hero in heroes:
+    print(f'{hero}')
+    print(f"    HP: {heroes[hero]['HP']}")
+    print(f"    MP: {heroes[hero]['MP']}")
