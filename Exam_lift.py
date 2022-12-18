@@ -4,6 +4,7 @@ total_seats = len(current_lyft_empty_seats) * 4
 current_lyft_empty_seats = list(map(int, current_lyft_empty_seats))
 seated = 0
 
+
 people_waiting_left = people_waiting
 
 for cabin in range(len(current_lyft_empty_seats)):
