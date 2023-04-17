@@ -16,3 +16,4 @@ for _ in range(n):
         for i in lst:
             clean += " " + str(i)
         print(f'{result[0][0]}:{clean}')
+        
